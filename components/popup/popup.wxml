@@ -1,0 +1,4 @@
+<!--components/popup/popup.wxml-->
+<view animation="{{animationData}}" class='geay-background'>
+  <text class='text-white'>{{content}}</text>
+</view>

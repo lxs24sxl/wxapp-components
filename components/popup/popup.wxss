@@ -1,0 +1,17 @@
+/* components/popup/popup.wxss */
+.geay-background {
+  position: fixed;
+  left: 0;
+  top: -80rpx;
+  width: 100vw;
+  height: 80rpx;
+  background-color: rgba(0, 0, 0, .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 150;
+}
+.text-white {
+  color: white;
+  font-size: 26rpx;
+}
