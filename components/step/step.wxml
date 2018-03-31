@@ -1,0 +1,21 @@
+<!--components/steps/steps.wxml-->
+<view class='steps-warpper'>
+  <view class='step-wrapper'>
+    <!--步骤内容  -->
+    <view class='step-content'>
+      <view class='step-top'>
+        <view class="step-title {{active?'active':'' }}">{{ stepTitle }}</view>
+        <text class='step-time'>{{ stepTime }}</text>
+      </view>
+      <view class='step-bottom'>
+        <text class='step-desc'>{{ stepDesc }}</text>
+      </view>
+      <!--步骤条  -->
+      <view class="step-circle {{active?'active':'' }}">
+         <!-- <view class='step-line-2' wx:if="{{ isShowLine }}"></view>  -->
+      </view>
+    </view>
+    <!--步骤条  -->
+    <view class='step-line-1' wx:if="{{ isShowLine }}"></view>
+  </view>
+</view>
