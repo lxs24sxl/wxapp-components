@@ -1,0 +1,56 @@
+/* components/panel/panel.wxss */
+
+.panel-wrapper {
+  width: 100%;
+  height: 160rpx;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+}
+
+.panel-wrapper .panel-inner {
+  /*todo： 之后margin要给*/
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.panel-inner .panel-img-wrapper {
+  width: 160rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-inner .panel-img-wrapper .panel-img {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #d2d2d2;
+  border-radius: 5rpx;
+}
+.panel-inner .panel-right {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+.panel-inner .panel-right .panel-info {
+  width: 380rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  color: #333333;
+}
+.panel-info .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.panel-inner .panel-right .panel-price {
+  margin-right: 20rpx;
+  color: #333333;
+  font-size: 24rpx;
+}

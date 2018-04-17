@@ -1,0 +1,17 @@
+<!--components/panel/panel.wxml-->
+<view class='panel-wrapper'>
+  <view class='panel-inner'>
+    <view class='panel-img-wrapper'>
+      <view class='panel-img'></view>
+    </view>
+    <view class='panel-right'>
+      <view class='panel-info'>
+        <text class='title'>{{ panelData.name }}</text>
+        <text class='num'>x{{ panelData.count }}</text>
+      </view>
+      <view class='panel-price'>
+        <text class='price'>¥{{ panelData.price }}</text>
+      </view>
+    </view>
+  </view>
+</view>
