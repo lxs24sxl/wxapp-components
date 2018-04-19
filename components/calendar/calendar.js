@@ -4,7 +4,15 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    hasCheckArr: {
+      type: Array,
+      value: [],
+      observer: (newVal, oldVal) => {
+        this.setData({
+          hasCheckInArr: newVal
+        });
+      }
+    }
   },
 
   /**
@@ -20,7 +28,7 @@ Component({
     },
     perMonthDays: 0,                // 当前月的天数
     firstDayOfWeek: 0,               // 当前月的第一天是星期几
-    isCheckArr: [1, 2, 3, 4, 5, 8, 9, 14, 16, 18],               // 已经签到的日期数组
+    hasCheckInArr: [1, 2, 3, 4, 5, 8, 9, 14, 16, 18],               // 已经签到的日期数组
     isCheck: false
   },
   /**
@@ -61,7 +69,7 @@ Component({
         curYear = calendar.curYear,         // 当前的年份
         curMonth = calendar.curMonth,       // 当前的月份
         curDay = calendar.curDay,           // 当前的天数
-        isCheckArr = data.isCheckArr,       // 已经签到了的天数数组
+        hasCheckInArr = data.hasCheckInArr,       // 已经签到了的天数数组
         perMonthDays = this.mGetdays(curYear, curMonth),                // 每个月的第一天
         firstDayOfWeek = this.getFirstDayOfWeek(curYear, curMonth);     // 每个星期的第一天
       // 空的日历盒子
@@ -73,7 +81,7 @@ Component({
       for (var i = 1, j = firstDayOfWeek, len = perMonthDays; i <= len; i++) {
         temp = new Object();
         temp['ind'] = i;
-        temp['isCheck'] = (isCheckArr.indexOf(i) != -1) ? true : false;
+        temp['isCheck'] = (hasCheckInArr.indexOf(i) != -1) ? true : false;
         dateWrap[j] = temp;
         j++;
       }
@@ -81,7 +89,7 @@ Component({
         dateWrap: dateWrap,
         perMonthDays: perMonthDays,
         firstDayOfWeek: firstDayOfWeek,
-        isCheck: isCheckArr.indexOf(curDay) != -1 ? !data.isCheck : data.isCheck
+        isCheck: hasCheckInArr.indexOf(curDay) != -1 ? !data.isCheck : data.isCheck
       });
     },
     /**
@@ -89,18 +97,29 @@ Component({
      */
     checkIn: function () {
       const data = this.data;
+      const calendar = data.calendar;
       // 已签到的数组
-      let isCheckArr = data.isCheckArr;
+      let hasCheckInArr = data.hasCheckInArr;
       const curDay = data.calendar.curDay;
       // 如果当前已经签到，则弹出提示框，否则签到
-      if (isCheckArr.indexOf(curDay) == -1) {
-        isCheckArr.push(curDay);
-        this.setData({ isCheckArr: isCheckArr });
+      if (hasCheckInArr.indexOf(curDay) == -1) {
+        hasCheckInArr.push(curDay);
+        this.setData({ hasCheckInArr: hasCheckInArr });
         wx.showToast({ title: '签到成功' });
         this.initCalendar();
       } else {
         wx.showToast({ title: '您已经签到过了', icon: 'none', duration: 1800 });
       }
+      // 向父组件传递参数
+      const checkInDetail = {
+        curDay: calendar.curDay,
+        curMonth: calendar.curMonth,
+        curYear: calendar.curyear,
+        perMonthDays: data.perMonthDays,
+        firstDayOfWeek: data.firstDayOfWeek
+      };
+      const checkInOption = {};
+      this.triggerEvent('checkIn', checkInDetail, checkInOption);
     }
   }
 })
