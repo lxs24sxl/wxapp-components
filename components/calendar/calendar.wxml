@@ -1,0 +1,23 @@
+<!--components/calendar/calendar.wxml-->
+<!--日历区  -->
+  <view class='calendar-wrapper'>
+    <!--日历标题  -->
+    <view class='weeks-title-wrapper'>
+      <view class='calendar-container'>
+        <view class='weeks-title' wx:for="{{calendar.weeksTitle}}" wx:key="{{ item }}">{{ item }}</view>
+      </view>
+    </view>
+    <!--日历  -->
+    <view class='calendar-list'>
+      <view class='calendar-container'>
+        <view class="calendar-item" wx:for="{{dateWrap}}" wx:key="{{item}}">
+          <view class="item-ind {{ item.ind == calendar.curDay && !item.isCheck?' cur ':' '}}">{{item!=null?item.ind:""}}</view>
+          <image class='item-img' src="../../images/user/yes@3x.png" wx:if="{{item.isCheck}}"></image>
+        </view>
+      </view>
+    </view>
+    <!--签到按钮  -->
+    <view class='btn-checkIn-wrapper' bindtap='checkIn'>
+      <text class='checkIn-title'>{{isCheck?'已签到':'签到'}}</text>
+    </view>
+  </view>

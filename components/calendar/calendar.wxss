@@ -1,0 +1,88 @@
+/* components/calendar/calendar.wxss */
+
+/*日历  */
+.calendar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+.calendar-wrapper .weeks-title-wrapper {
+  height: 68rpx;
+  background-color: #f7fffa;
+}
+.calendar-wrapper .weeks-title-wrapper, .calendar-wrapper .calendar-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-container {
+  width: 700rpx;
+  height: 100%;
+}
+.calendar-wrapper .weeks-title-wrapper .calendar-container  {
+  display: flex;
+  
+}
+.calendar-wrapper .weeks-title-wrapper .weeks-title {
+  height: 100%;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+  font-size: 24rpx;
+  font-weight: 400;
+}
+/*日历区  */
+.calendar-wrapper .calendar-list {
+  background-color: #fff;
+}
+.calendar-wrapper .calendar-list .calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar-wrapper .calendar-list .calendar-item {
+  width: 100rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.calendar-list .calendar-item .item-ind.cur  {
+  color: #fff;
+  background-color:#7be29f;
+  width: 58rpx;
+  height: 58rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 8rpx 6rpx 20rpx rgba(123, 226, 159, 0.31);
+}
+.calendar-list .calendar-item .item-img {
+  position: absolute;
+  bottom: 13rpx;
+  left: 52%;
+  width: 30rpx;
+  height: 30rpx;
+}
+/*按钮  */
+.btn-checkIn-wrapper {
+  margin: 20rpx 0;
+  width: 267rpx;
+  height: 78rpx;
+  background-color: #7be29f;
+  border-radius: 39rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 36rpx;
+}
