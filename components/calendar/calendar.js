@@ -114,7 +114,7 @@ Component({
       const checkInDetail = {
         curDay: calendar.curDay,
         curMonth: calendar.curMonth,
-        curYear: calendar.curyear,
+        curYear: calendar.curYear,
         perMonthDays: data.perMonthDays,
         firstDayOfWeek: data.firstDayOfWeek
       };
