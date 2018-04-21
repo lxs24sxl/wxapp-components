@@ -7,12 +7,13 @@ Component({
     panelData: {
       type: Object,
       value: {
-        imgSrc: '',
-        name: '原味马卡龙，新品上市。原味马卡龙，新品上市。原味马卡龙，新品上市。原味马卡龙，新品上市',
-        count: 2,
-        price: 200
+        sale_img: '',
+        sale_name: '原味马卡龙，新品上市。原味马卡龙，新品上市。原味马卡龙，新品上市。原味马卡龙，新品上市',
+        amount: 2,
+        totalPrice: 200
       },
       observer: function ( newVal, oldVal ) {
+        newVal['totalPrice'] = newVal['totalPrice'].toFixed(2)
         this.setData({
           panelData: newVal
         })

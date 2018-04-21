@@ -2,15 +2,17 @@
 <view class='panel-wrapper'>
   <view class='panel-inner'>
     <view class='panel-img-wrapper'>
-      <view class='panel-img'></view>
+      <image src="{{panelData.sale_img}}" class='panel-img'>
+        
+      </image>
     </view>
     <view class='panel-right'>
       <view class='panel-info'>
-        <text class='title'>{{ panelData.name }}</text>
-        <text class='num'>x{{ panelData.count }}</text>
+        <text class='title'>{{ panelData.sale_name }}</text>
+        <text class='num'>x{{ panelData.amount }}</text>
       </view>
       <view class='panel-price'>
-        <text class='price'>¥{{ panelData.price }}</text>
+        <text class='price'>¥{{ panelData.totalPrice }}</text>
       </view>
     </view>
   </view>
