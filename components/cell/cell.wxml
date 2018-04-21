@@ -1,6 +1,6 @@
 <!--components/cell/cell.wxml-->
 <view class='cell-wrapper' wx:if="{{ cellType == 'normal' }}" style="{{cellStyle}}">
-  <!--默认类型1  -->
+  <!--默认类型  -->
   <view class='cell-inner' style="border-bottom: {{hasBorder?'1px solid #f5f5f5':'none'}}">
     <view class='cell-left'>
       <text class='cell-title'>{{ cellTitle }}</text>
@@ -12,7 +12,7 @@
 </view>
 
 <view class="content-type-wrapper {{ cellDesc? 'medium':''}}" wx:if="{{ cellType == 'content'}}" style="{{ cellStyle }}" >
-  <!--内容优先类型2  -->
+  <!--内容优先类型  -->
   <view class='cell-content-type' style="border-bottom: {{hasBorder?'1px solid #f5f5f5':'none'}}">
     <view class='cell-left'>{{ cellTitle }}</view>
     <view class='cell-right'>

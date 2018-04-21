@@ -27,7 +27,7 @@ Component({
         if (/-/.test(newVal)) {
           this.setData({
             defaultValueType: 'red'
-          })
+          });
         }
       }
     },
