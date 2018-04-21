@@ -1,0 +1,113 @@
+/* components/cellList/cellList.wxss */
+
+.cell-list-wrapper {
+  height: 98rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cell-list-wrapper .cell-list-left, .cell-list-wrapper .cell-list-right {
+  flex: 1 0 auto;
+  display: flex;
+}
+
+.cell-list-left .cell-rank-wrapper {
+  width: 50rpx;
+  text-align: left;
+  line-height: 98rpx;
+  color: #333;
+  font-size: 30rpx;
+}
+
+.cell-list-left .cell-img-wrapper {
+  width: 68rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell-list-left .cell-img-wrapper .cell-img {
+  width: 68rpx;
+  height: 68rpx;
+}
+
+.cell-list-left .cell-name-wrapper {
+  color: #333;
+  font-size: 24rpx;
+  line-height: 98rpx;
+  width: 270rpx;
+  overflow: hidden;
+  white-space: nowrap;
+   text-overflow: ellipsis;
+  margin-left: 20rpx;
+}
+
+.cell-list-right {
+  align-items: center;
+  justify-content: flex-end;
+  color: #333;
+  font-size: 24rpx;
+}
+.cell-list-right .cell-win-wrapper {
+  font-weight: bold;
+}
+.cell-list-right .cell-correct-wrapper {
+  color: #ff8065;
+}
+
+
+/*前三榜单  */
+.top-3-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 300rpx;
+  width: 100%;
+}
+.top-3-wrapper .top-item-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 223rpx;
+}
+.top-item-wrapper .item-img-wrapper {
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.top-item-wrapper .item-img-wrapper .item-img {
+  width: 98rpx;
+  height: 98rpx;
+  border-radius: 50%;
+}
+.top-item-wrapper .item-img-wrapper  .item-img.big {
+  width: 120rpx;
+  height: 120rpx;
+}
+.top-item-wrapper .item-name {
+  color: #333;
+  font-size: 24rpx;
+  margin-top: 26rpx;
+  width: 220rpx;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top-item-wrapper .item-desc {
+  width: 174rpx;
+  height: 48rpx;
+  background-color: #f5f5f5;
+  border-radius: 24rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: #333;
+  font-size: 22rpx;
+  margin-top: 22rpx;
+}

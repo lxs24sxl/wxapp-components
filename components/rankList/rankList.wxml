@@ -1,0 +1,23 @@
+<!--components/rank-list/rank-list.wxml-->
+<view class='top-3-wrapper' wx:if="{{ hasTop }}">
+  <view class='top-item-wrapper' wx:for="{{ topData }}" wx:key="{{ item.people_name }}">
+    <view class='item-img-wrapper'>
+      <image class="item-img {{item.rank == 1? 'big': ''}}" src="{{ item.people_img }}"></image>
+    </view>
+    <view class='item-name'>{{item.people_name}}</view>
+    <view class='item-desc'>{{rankType == 'preseverance'?'挑战'+item.total_count+'次':'获得'+item.win_count+'个皮肤'}}</view>
+  </view>
+</view>
+<view class='cell-list-wrapper' wx:for="{{ hasTop?extraData:rankData }}" wx:key="{{ item.people_name }}">
+  <view class='cell-list-left'>
+    <view class='cell-rank-wrapper'>{{ item.rank}}</view>
+    <view class='cell-img-wrapper'>
+      <image class='cell-img' mode='widthFix' src="{{ item.people_img }}"></image>
+    </view>
+    <view class='cell-name-wrapper'>{{ item.people_name }}</view>
+  </view>
+  <view class='cell-list-right'>
+    <view class="cell-win-wrapper">{{rankType == 'preseverance'?'挑战'+item.total_count+'次':'获得'+item.win_count+'个皮肤'}}</view>
+    <view class='cell-correct-wrapper' wx:if="{{ rankType === 'all' }}">(答对{{ item.mix_correct_count}}题)</view>
+  </view>
+</view>
