@@ -1,0 +1,34 @@
+/* components/chuntdown/chuntdown.wxss */
+.chuntdown-wrapper {
+  width: 282rpx;
+  height: 282rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chuntdown-wrapper .chuntdown-inner {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210rpx;
+  height: 210rpx;
+   opacity: 0.80; 
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0rpx 9rpx 29rpx rgba(255, 91, 94, 0.06);
+}
+.chuntdown-inner .chuntdown-time {
+  color: #ff575c;
+  font-size: 91rpx;
+}
+
+.chuntdown-inner .chuntdown-circle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
