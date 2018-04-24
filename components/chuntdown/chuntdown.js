@@ -2,7 +2,7 @@
 let timer = null;
 let titleCount = 0;
 let drawCount = 0;
-
+let Promise = require('../../utils/promise.min.js'); 
 Component({
   /**
    * 组件的属性列表
@@ -19,6 +19,7 @@ Component({
           chuntdownTime: null,
           speedMultiple: null
         };
+        console.log('传入的参数: ' + newVal );
         switch (Number(newVal)) {
           case 1:
             chuntdownData = { chuntdownTime: 10, speedMultiple: 2 };
@@ -65,8 +66,20 @@ Component({
       value: 'default',
       observer: function (newVal, oldVal) {
         this.setData({
-
+          size: newVal
         });
+      }
+    },
+    /**
+     * 关闭定时器
+     */
+    isClear: {
+      type: Boolean,
+      value: false,
+      observer: function ( newVal, oldVal ) {
+        if ( newVal ) {
+          clearInterval(timer)
+        }
       }
     }
   },
@@ -86,10 +99,12 @@ Component({
   attached() {
     const that = this;
     const data = that.data;
+    console.log('我又在渲染啦~')
   },
   ready() {
     const that = this;
     const data = that.data;
+    clearInterval(timer);
     // 在ready生命周期里面调用，以便获取节点数据
     that.startChuntDown('chuntdown');
   },
@@ -134,13 +149,14 @@ Component({
           curTime = curTime - 100;
           // 当时间为0以下时，停止定时器
           if (curTime <= 0) {
-            clearInterval(timer);
+            
             wx.showToast({ title: '网络异常,请检查你的网络情况', icon: "none", duration: 1500 });
             // console.log(new Date().getTime())
             time = new Date().getTime() - time;
             console.log("一共用的时间: ", time / 1000);
             console.log("正常需要用的时间: " + normalTime)
             console.log("定时器循环的次数: " + titleCount + ", 绘画执行的次数: " + drawCount);
+            clearInterval(timer);
           }
           titleCount++;
           // 当数值为整数时，改变页面
