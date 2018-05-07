@@ -270,8 +270,8 @@ Component({
           wx.showToast({ title: '传入的倒计时等级参数不是数字', icon: "none" });
           reject();
         }
-        if (level && level > 0 && level <= 10) {
-          resolve()
+        if (level && level > 0 ) {
+          resolve();
         } else {
           wx.showToast({ title: '传入的倒计时等级参数不符合规则', icon: "none" });
           reject();
