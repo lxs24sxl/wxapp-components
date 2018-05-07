@@ -1,7 +1,7 @@
 <!--components/chuntdown/chuntdown.wxml-->
 <view class="chuntdown-wrapper {{size =='small'?'small':''}}">
   <view class="chuntdown-inner" id="chuntdown-inner">
-    <text class='chuntdown-time'>{{ chuntdownTime }}</text>
+    <text class='chuntdown-time'>{{ curChuntdownTime }}</text>
     <canvas class='chuntdown-circle' canvas-id='chuntdown'></canvas>
   </view>
 </view>
