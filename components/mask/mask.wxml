@@ -1,0 +1,7 @@
+<!--components/mask/mask.wxml-->
+<view class='mask-wrapper' wx:if="{{isShow }}" catchtouchmove='_preventD'>
+  <view class='mask-inner' animation="{{ animationData }}">
+    <slot class="mask-content"></slot>
+  </view>
+  <view class='mask-bg' bindtap='_hideMask'></view>
+</view>
