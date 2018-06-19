@@ -1,0 +1,17 @@
+<!--components/notification/notification.wxml-->
+<view class='notification-wrapper'>
+  <view class='nc-inner'>
+    <view class='nc-icon-wrapper' style="background-color: {{cur_color}};">
+      <text class='iconfont {{icon_type}} icon' style="color: #fff;font-size: 80rpx;"></text>
+    </view>
+    <view class='nc-content-wrapper'>
+      <view class='title'>{{title}}</view>
+      <view class='sub-title' wx:for="{{subTitleArr}}" wx:key="{{item}}">
+        {{item}}
+      </view>
+    </view>
+    <view class='nc-btn-wrapper'>
+      <button bindtap='__click' style="background-color: {{cur_color}};" class='btn'>{{btnTitle}}</button>
+    </view>
+  </view>
+</view>

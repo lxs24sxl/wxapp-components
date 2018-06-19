@@ -1,0 +1,63 @@
+/* components/notification/notification.wxss */
+@import "./iconfont/iconfont.wxss";
+.notification-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.nc-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nc-icon-wrapper {
+  width: 180rpx;
+  height: 180rpx;
+  background-color: #04aaed;
+  border-radius: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  margin-top: 80rpx;
+}
+.nc-icon-wrapper .icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.nc-icon-wrapper .icon.icon-success {
+  transform: translate(-46%,-54%);
+}
+.nc-content-wrapper {
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+.nc-content-wrapper .title {
+  color: #222;
+  font-size: 32rpx;
+}
+.nc-content-wrapper .sub-title {
+  color: #bcbcbc;
+  margin-top: 16rpx;
+}
+button::after {
+  border: none;
+  background-color: transparent;
+}
+.nc-btn-wrapper {
+  margin-top: 60rpx;
+}
+.nc-btn-wrapper .btn {
+  width: 700rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  color: #fff;
+  font-size: 32rpx;
+  background-color: #04aaed;
+  border-radius: 14rpx;
+  padding: 0;
+  margin: 0;
+}
