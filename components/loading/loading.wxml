@@ -1,0 +1,3 @@
+<!--components/loading/loading.wxml-->
+<view wx:if="{{loadingType == 'spinner'}}" class='spinner' style="background-color: {{ color }}"></view>
+<view wx:elif="{{loadingType == 'normal'}}" class="normal"></view>
