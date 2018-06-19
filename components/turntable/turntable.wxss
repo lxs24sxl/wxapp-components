@@ -1,0 +1,61 @@
+/* components/turntable/turntable.wxss */
+.tt-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.opportunity-wrapper {
+  background-color: #4d27b6;
+  border-radius: 25rpx;
+  /* width: 320rpx; */
+  padding: 0 20rpx; 
+  height: 50rpx;
+  font-size: 32rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tt-main {
+  height: 668rpx;
+  width: 666rpx;
+  margin-top: 50rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tt-main .tt-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://qncate.yolewa.com/1529116334924.png"); 
+  background-size: 100% 100%;
+}
+.tt-img.normal {
+  animation: turnRotate 20s linear infinite;
+}
+@keyframes turnRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+.btn-tt-start {
+  width: 171rpx;
+  height: 240rpx;
+  transform: translateY(-40rpx);
+  background-image: url("http://qncate.yolewa.com/1529117068081.png");
+  background-size: 100% 100%;
+  z-index: 3;
+  background-color: transparent;
+}

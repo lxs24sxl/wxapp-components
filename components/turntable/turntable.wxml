@@ -1,0 +1,10 @@
+<!--components/turntable/turntable.wxml-->
+<view class='tt-wrapper'>
+  <view class='opportunity-wrapper'>
+    你还有{{lot_number}}次抽奖机会
+  </view>
+  <view class='tt-main'>
+    <view class="tt-img {{active?'':'normal'}}" animation="{{turnAnimation}}"></view>
+    <button hover-class="none" bindtap='startLottery' class='btn-tt-start'></button>
+  </view>
+</view>
