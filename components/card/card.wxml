@@ -1,0 +1,12 @@
+<!--components/card/card.wxml-->
+<navigator bindtap="clickNavigator" target="miniProgram" open-type="navigate" app-id="{{insertValue.ap_appid}}" path="{{insertValue.ad_path}}" extra-data="{{insertValue.ad_extra == '0'?'':insertValue.ad_extra}}"  version="release" class='card-wrapper'>
+  <view class='card-left-wrapper'>
+    <image wx:if="{{insertValue.ad_thumb-img}}" class='card-img' src="{{insertValue.ad_thumb_img}}"></image>
+  </view>
+  <view class='card-right-wrapper'>
+    <view class='right-content-wrapper'>
+      <text class='content-title'>{{insertValue.ad_title}}</text>
+      <text class='content-time'>{{insertValue.status == '1'?"长期有效":"已经失效"}}</text>
+    </view>
+  </view>
+</navigator>

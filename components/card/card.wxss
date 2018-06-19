@@ -1,0 +1,69 @@
+/* components/card/card.wxss */
+.card-wrapper {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 20rpx;
+  margin-top: 24rpx;
+  display: flex;
+  background-color: transparent;
+  margin-left: none;
+  padding: 0;
+  text-align: left;
+}
+.card-wrapper .card-left-wrapper {
+  height: 100%;
+  width: 283rpx;
+  background-color: #999999;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+.card-wrapper .card-left-wrapper .card-img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+.card-wrapper .card-right-wrapper {
+  flex: 1;
+  height: 100%;
+   background-color: #fff; 
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.card-right-wrapper:after  {
+  position: absolute;
+  right: 57rpx;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 18rpx;
+  height: 18rpx;
+  content: "";
+  border-top: 3rpx solid #808080;
+  border-right: 3rpx solid #808080;
+}
+.card-right-wrapper .right-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 388rpx;
+  height: 100%;
+}
+
+.right-content-wrapper .content-title {
+  margin-left: 36rpx;
+  font-size: 30rpx;
+  color: #000000;
+  overflow: hidden;
+  width: 388rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.right-content-wrapper .content-time {
+  margin-left: 36rpx;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
